@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 18:24:33 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/05/12 18:41:29 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/11/11 16:18:51 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,14 @@ int	ft_printf(const char *in, ...)
 	print_in(&in, ap, &n_ch);
 	va_end(ap);
 	return (n_ch);
+}
+
+int main(void)//il main non c'era
+{
+	printf("Number of bytes printed (d) : %d\n", ft_printf("test d : %d %d %d. Ok.\n", 23, +2147483647, -2147483648));
+    printf("Number of bytes printed (x): %d\n", ft_printf("test x : %x %x %x.\n", 35467, -2147483648, +2147483647));
+    printf("Number of bytes printed (s): %d\n", ft_printf("test s : %s\n", "Hello World"));
+	printf("Number of bytes printed (s): %d\n", ft_printf(""));
+	printf("Number of bytes printed (s): %d\n", ft_printf("%"));
+	return (0);
 }

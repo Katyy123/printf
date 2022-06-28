@@ -6,7 +6,7 @@
 /*   By: cfiliber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 19:09:30 by cfiliber          #+#    #+#             */
-/*   Updated: 2021/05/15 20:27:38 by cfiliber         ###   ########.fr       */
+/*   Updated: 2021/11/11 13:25:49 by cfiliber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_flg
 {
@@ -25,6 +26,8 @@ typedef struct s_flg
 	int	precision;
 	int	only_dot;
 }				t_flg;
+
+int				main(void);//il main non c'era
 
 void			print_arg(const char **in, t_flg flg, va_list ap, int *n_ch);
 void			init_flg(t_flg *flg);
